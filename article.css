@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import url('htpps://fonts.googleapis.com/css?family=Pacifico');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap");
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+	background-color: #2F4F4F; 
+	overflow-x: hidden; 
+	-webkit-font-smoothing: antialiased; 
+  line-height: 1.5;
+  font-weight: 400;
+  color: #ffffff;
+	margin: 0;
+	padding: 0;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+}
+
+nav{
+  display: flex;
+  height: 80px;
+  width: 100%;
+  background: #2F4F4F; 
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 50px;
+  flex-wrap: wrap;
+}
+nav .logo{
+    background-color: #2F4F4F;
+    overflow: hidden;
+    justify-content: space-between;
+}
+nav .logo img{
+    float: left;
+    margin-top: 10px;
+    width: 100px;
+}
+nav ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+nav ul li{
+  margin: 0 5px;
+}
+nav ul li a{
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+nav ul li a.active,
+nav ul li a:hover{
+  color: #2F4F4F; 
+  background: #fff;
+}
+nav .menu-btn i{
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+input[type="checkbox"]{
+  display: none;
+}
+@media (max-width: 1000px){
+  nav{
+    padding: 0 40px 0 50px;
+  }
+}
+@media (max-width: 920px) {
+  nav .menu-btn i{
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before{
+    content: "\f00d";
+  }
+  nav ul{
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: #2F4F4F; 
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  #click:checked ~ ul{
+    left: 0;
+  }
+  nav ul li{
+    width: 100%;
+    margin: 40px 0;
+  }
+  nav ul li a{
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  #click:checked ~ ul li a{
+    margin-left: 0px;
+  }
+  nav ul li a.active,
+  nav ul li a:hover{
+    background: none;
+    color: #000;
+  }
+}
+
+
+
+.top-section{
+  text-align: center;
+  padding: 4rem 0;
+  max-width: 600px;
+  margin: 0 auto;
+  color: #E6E6E6;
+}
+
+.container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 0;
+  background-color: #2F4F4F; 
+}
+.timeline {
+  width: 80%;
+  height: auto;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.sujet{
+  text-decoration: none;
+  padding: 15px;
+}
+.timeline ul {
+  list-style: none;
+}
+
+.timeline ul li {
+  padding: 20px;
+  background-color: #fff;
+  color: #000;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.timeline h3{
+  color: #fff;
+}
+.timeline ul li:last-child {
+  margin-bottom: 0;
+}
+.timeline-content h1 {
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+.timeline-content p {
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 300;
+}
+.timeline-content .date {
+  font-size: 12px;
+  font-weight: 300;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+@media only screen and (min-width: 768px) {
+  .timeline:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background-color: gray;
+  }
+  .timeline ul li {
+    width: 50%;
+    position: relative;
+    margin-bottom: 50px;
+  }
+  .timeline ul li:nth-child(odd) {
+    float: left;
+    clear: right;
+    transform: translateX(-30px);
+    border-radius: 20px 0px 20px 20px;
+  }
+  .timeline ul li:nth-child(even) {
+    float: right;
+    clear: left;
+    transform: translateX(30px);
+    border-radius: 0px 20px 20px 20px;
+  }
+  .timeline ul li::before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: gray;
+    top: 0px;
+  }
+  .timeline ul li:nth-child(odd)::before {
+    transform: translate(50%, -50%);
+    right: -30px;
+  }
+  .timeline ul li:nth-child(even)::before {
+    transform: translate(-50%, -50%);
+    left: -30px;
+  }
+  .timeline-content .date {
+    position: absolute;
+    top: -30px;
+  }
+  .timeline ul li:hover::before {
+    background-color: aqua;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+footer {
+    overflow-x: hidden; 
+    font-family: roboto; 
+    display: flex;
+    justify-content: center;
+    background-color: #000;
+    color: #fff;
+    padding: 50px;
+    margin-top: 30vw;  
+}
+
+footer p{
+    margin-top: 20vw;
+    color: #2F4F4F;
+
+}
+
+
+
+
+.social-menu .social {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0;
+    margin: 0;
+    display: flex;
+    margin-top: 10vw;
+}
+.social-menu .social .reseau {
+    list-style: none;
+    margin: 0 10px;
+}
+.social-menu .social .reseau .fa {
+    color: #000000;
+    font-size: 25px;
+    line-height: 50px;
+    transition: .5s;
+}
+.social-menu .social .reseau .fa:hover {
+    color: #ffffff;
+}
+.social-menu .social .reseau .net {
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    text-align: center;
+    transition: 0.5s;
+    transform: translate(0,0px);
+    box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.5);
+}
+.social-menu .social .reseau .net:hover {
+    transform: rotate(0deg) skew(0deg) translate(0, -10px);
+}
+.social-menu .social .reseau:nth-child(1) .net:hover {
+    background-color: #3b5999;
+}
+.social-menu .social .reseau:nth-child(2) .net:hover {
+    background-color: #55acee;
+}
+.social-menu .social .reseau:nth-child(3) .net:hover {
+    background-color: #e4405f;
+}
+.social-menu .social .reseau:nth-child(4) .net:hover {
+    background-color: #cd201f;
+}
+.social-menu .social .reseau:nth-child(5) .net:hover {
+    background-color: #0077B5;
+}
+
+
+
+radial-gradient(#000 8%, transparent 8%),#2F4F4F;
