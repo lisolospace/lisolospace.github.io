@@ -520,20 +520,21 @@ section{
 
 
 
+
 footer {
-	overflow-x: hidden; 
-	font-family: roboto; 
+    overflow-x: hidden; 
+    font-family: roboto; 
     display: flex;
     justify-content: center;
     background-color: #000;
     color: #fff;
     padding: 50px;
-    margin-top: 0vw;  
+    margin-top: 30vw;  
 }
 
 footer p{
-	margin-top: 20vw;
-	color: #2F4F4F;
+    margin-top: 20vw;
+    color: #2F4F4F;
 
 }
 
@@ -594,3 +595,5 @@ footer p{
 }
 
 
+
+radial-gradient(#000 8%, transparent 8%),#2F4F4F;
